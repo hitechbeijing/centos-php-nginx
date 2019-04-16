@@ -20,10 +20,10 @@ RUN make install
 RUN echo -e ";  Enable swoole extension module\nextension=swoole.so" > /etc/php.d/swoole.ini
 WORKDIR /
 RUN rm -rf swoole-4.3.1 swoole-4.3.1.tgz
-RUN echo -e ":set encoding=utf-8\n\
-:set fileencodings=ucs-bom,utf-8,cp936\n\
-:set fileencoding=gbk\n\
-:set termencoding=utf-8" > /root/.vimrc
+# RUN echo -e ":set encoding=utf-8\n\
+# :set fileencodings=ucs-bom,utf-8,cp936\n\
+# :set fileencoding=gbk\n\
+# :set termencoding=utf-8" > /root/.vimrc
 RUN cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 RUN yum install kde-l10n-Chinese -y
 RUN yum install glibc-common -y
