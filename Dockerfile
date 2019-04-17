@@ -9,7 +9,7 @@ RUN yum makecache
 RUN yum install -y nginx
 RUN yum install -y epel-release
 RUN rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
-RUN yum install -y php71w-fpm php71w-mysql php71w-mbstring php71w-gd php71w-cli php71w-devel php71w-mcrypt php71w-pdo php71w-pecl-redis php71w-xml gcc gcc-c++ autoconf pcre-devel
+RUN yum install -y php71w-fpm php71w-common php71w-mysql php71w-mbstring php71w-gd php71w-cli php71w-devel php71w-mcrypt php71w-pdo php71w-pecl-redis php71w-xml gcc gcc-c++ autoconf pcre-devel
 RUN wget http://pecl.php.net/get/swoole-4.3.1.tgz
 RUN tar -xzvf swoole-4.3.1.tgz
 WORKDIR /swoole-4.3.1
